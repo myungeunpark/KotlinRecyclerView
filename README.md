@@ -1,4 +1,4 @@
-### Layout Type
+# RecyclerView Layout Type
 
 ![image](https://user-images.githubusercontent.com/53125879/74468394-9c4e9500-4e4f-11ea-873b-a9435cfa3c2b.png)v
 
@@ -47,20 +47,17 @@ After clicking the item of list
 </pre>
   
  2. Add the recyclerview component on the activity layout 
- 
-<pre>
-<code>
+
+```
    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-</code>
-</pre>       
+```   
         
  3. Create recycler item layout     
   
-<pre>
-<code> 
+```
   <?xml version="1.0" encoding="utf-8"?>
   <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -120,8 +117,7 @@ After clicking the item of list
 
 
 </RelativeLayout>
-</code>
-</pre>
+```
   
   
 4. Create Data class 
