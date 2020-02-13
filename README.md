@@ -16,3 +16,18 @@ After clicking the item of list
 
 ## How to develop the recycler view 
 
+
+### Layout Type
+
+---------------------------------------------------------
+
+    // Liner layout 
+    layoutManager = LinearLayoutManager(this@MainActivity)
+
+    // Grid Layout
+    //layoutManager = GridLayoutManager(this@MainActivity, 2)
+
+    // Staggered Grid Layout
+    //layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+
+------------------------------------------------------------
