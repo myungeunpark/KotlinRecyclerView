@@ -6,7 +6,7 @@ class DataSet {
 
     companion object{
 
-        fun getDataSet() : List<PostData> {
+        fun getInitDataSet() : List<PostData> {
 
             val list : List<PostData>
             list = ArrayList()
@@ -17,12 +17,35 @@ class DataSet {
                     "Terre", "Tom"
                 )
             )
+
             list.add(
                 PostData(
                     "https://www.w3schools.com/css/img_forest.jpg",
                     "Forest", "Marry Han"
                 )
             )
+            return list
+        }
+
+        fun getDataSet() : List<PostData> {
+
+            val list : List<PostData>
+            list = ArrayList()
+
+
+            list.add(
+                PostData(
+                    "https://www.w3schools.com/css/img_5terre.jpg",
+                    "Terre", "Tom"
+                )
+            )
+            /*
+            list.add(
+                PostData(
+                    "https://www.w3schools.com/css/img_forest.jpg",
+                    "Forest", "Marry Han"
+                )
+            )*/
             list.add(
                 PostData(
                     "https://www.w3schools.com/css/img_lights.jpg",
