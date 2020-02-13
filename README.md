@@ -16,9 +16,11 @@ image source : https://tutorial.eyehunts.com/
     
 
 
-# KotlinRecyclerView
+# KotlinRecyclerView Project 
 
 source : myungeunpark/KotlinRecyclerView/app
+
+## Application screenshots 
 
 Implement recyclerview with LinearLayout 
 
@@ -37,12 +39,15 @@ After clicking the item of list
 
  1. dependency (build.gradle)
  
+  // recycler view 
   implementation 'androidx.recyclerview:recyclerview:1.1.0'
+  
   
   
  2. Add the recyclerview component on the activity layout 
  
-     <androidx.recyclerview.widget.RecyclerView
+ 
+   <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
@@ -52,7 +57,7 @@ After clicking the item of list
   
   
   <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -121,7 +126,8 @@ After clicking the item of list
   
 5. Create Adapter class for recyclerview
   
-  
+
+
 class DataAdapter constructor  (val listener : ItemClickListener): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var arrayList :List<PostData> = ArrayList()
@@ -188,7 +194,9 @@ class DataAdapter constructor  (val listener : ItemClickListener): RecyclerView.
 }
 
 
+
 6. set the adapter to the recycler view on Activity class 
+
 
 
 private lateinit var list: List<PostData>       // list for data set
@@ -209,6 +217,8 @@ recyclerView.apply {
             dataAdapter.setData(list)
             adapter = dataAdapter
         }
+
+
 
 
 ## Improve the performance of recyclerview with DiffUtil and Async
@@ -232,6 +242,7 @@ https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/Diff
 
     }
     private val differ = AsyncListDiffer(this, DIFF_CALLBACK)
+
 
 
 ## How to ListAdapter Template 
