@@ -39,23 +39,28 @@ After clicking the item of list
 
  1. dependency (build.gradle)
  
+<pre>
+<code>
   // recycler view 
   implementation 'androidx.recyclerview:recyclerview:1.1.0'
-  
-  
+</code>
+</pre>
   
  2. Add the recyclerview component on the activity layout 
  
- 
+<pre>
+<code>
    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-        
+</code>
+</pre>       
         
  3. Create recycler item layout     
   
-  
+<pre>
+<code> 
   <?xml version="1.0" encoding="utf-8"?>
   <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -115,18 +120,23 @@ After clicking the item of list
 
 
 </RelativeLayout>
-
+</code>
+</pre>
   
   
 4. Create Data class 
   
+<pre>
+<code>
   // DataSet.kt  
   data class PostData (var image: String, var name: String, var auth : String)
-  
+</code>
+</pre> 
   
 5. Create Adapter class for recyclerview
   
-
+<pre>
+<code>
 
 class DataAdapter constructor  (val listener : ItemClickListener): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -192,12 +202,14 @@ class DataAdapter constructor  (val listener : ItemClickListener): RecyclerView.
 
     }
 }
-
+</code>
+</pre>
 
 
 6. set the adapter to the recycler view on Activity class 
 
-
+<pre>
+<code>
 
 private lateinit var list: List<PostData>       // list for data set
 private lateinit  var dataAdapter: DataAdapter  // Adapter for recycler view
@@ -217,7 +229,8 @@ recyclerView.apply {
             dataAdapter.setData(list)
             adapter = dataAdapter
         }
-
+</code>
+</pre>
 
 
 
@@ -228,7 +241,8 @@ It can be used to calculate updates for a RecyclerView Adapter. See ListAdapter 
 
 https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/DiffUtil
 
-
+<pre>
+<code>
  val DIFF_CALLBACK = object : DiffUtil.ItemCallback<PostData>() {
 
 
@@ -242,7 +256,8 @@ https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/Diff
 
     }
     private val differ = AsyncListDiffer(this, DIFF_CALLBACK)
-
+</code>
+</pre>
 
 
 ## How to ListAdapter Template 
